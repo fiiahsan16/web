@@ -14,6 +14,7 @@ use App\Http\Controllers\MainController;
 |
 */
 Route::get('/mysurvey-data', [App\Http\Controllers\MainController::class, 'data']);
+Route::get('/assess', [App\Http\Controllers\MainController::class, 'showasses']);
 
 Route::resources(['dash'=> MainController::class]);
 

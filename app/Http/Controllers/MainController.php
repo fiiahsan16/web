@@ -18,11 +18,15 @@ class MainController extends Controller
 
     }
 
+    public function showasses()
+    {
+        
+        return view('survey.show-assessment');
+    }
+    
+
     public function show($id)
     {
-        // $sisw = Surveys::first()->paginate(5);
-        // //mysurvei logic here
-        // return view ('survey.mysurvey',compact('sisw'))->with('i', (request()->input('page', 1) -1) * 5);
         $mitra = Mitras::where('email', $id)->first();
 
         $surveys = Surveys::all();
@@ -65,8 +69,8 @@ class MainController extends Controller
                 "data" => []
             ]);
         } else {
-            $survey = Surveys::find($request->id);
-            $mitras = $survey->mitras;
+            $survey = Mitras::find('adams.leo@example.org');
+            $mitras = $survey->surveys;
             $recordsTotal = count($mitras);
             $recordsFiltered = $mitras->where('name', 'like', '%' . $request->search["value"] . '%')->count();
 
@@ -110,9 +114,7 @@ class MainController extends Controller
                 $mitraData["rating"] = $mitra->avgrating();
                 $surveys = Surveys::find($mitra->survey_id);
                 $mitraData["survey_id"] = $surveys->name;
-                $asses = Assessments::find($mitra->pivot->rating);
-                $mitraData["rating"] = $surveys->name;
-                $mitraData["id"] = $mitra->email;
+                $mitraData["id"] = 'adams.leo@example.org';
                 $mitrasArray[] = $mitraData;
                 $i++;
             }

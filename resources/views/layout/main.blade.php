@@ -62,7 +62,7 @@
                             </a> --}}
                             <a class="nav-link @if(str_contains(url()->current(), url('/statuspendaftar')) || str_contains(url()->current(), url('/assess'))) active @endif" href="#navbar-dash" data-toggle="collapse" role="button" aria-expanded="@if(str_contains(url()->current(), url('/mitras')) || str_contains(url()->current(), url('/recruitments'))) true @else false @endif" aria-controls="navbar-forms">
                                 <i class="fas fa-home text-primary"></i>
-                                <span class="nav-link-text">Mitra</span>
+                                <span class="nav-link-text">My Survey</span>
                             </a>
                             <div class="collapse @if(str_contains(url()->current(), url('/statuspendaftar')) || str_contains(url()->current(), url('/assess'))) show @endif" id="navbar-dash">
                                 <ul class="nav nav-sm flex-column">

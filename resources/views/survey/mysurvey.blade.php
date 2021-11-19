@@ -92,102 +92,7 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="card">
-                    <!-- Card header -->
-                    <div class="card-header">
-                        <div class="row">
-                            <div class="col-6">
-                                <h3 class="mb-0 mt-2">NilaiKu</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-12" id="row-table">
-                                <div class="table-responsive">
-                                    <table class="table" id="datatable-id" width="100%">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nama Survei</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    {{-- <table class="table align-items-center table-flush">
-        <thead>
-            <h6 class="heading-small text-muted mb-4">Pengalaman Survei</h6>
-        </thead>
-        <tbody>
-            <div class="pl-lg-4">
-                @if (count($mitra->surveys) > 0)
-                    <p>
-                        @foreach ($mitra->surveys as $survey)
-                            {{ $survey->name }},
-                        @endforeach
-                    </p>
-                @else
-                    <p>-</p>
-                @endif
-            </div>
-        </tbody>
-    </table>
-
-    <table class="table align-items-center table-flush">
-        <thead>
-            <h6 class="heading-small text-muted mb-4">Pengalaman Survei klien</h6>
-        </thead>
-        <tbody>
-            <div class="pl-lg-4">
-                @if (count($mitra->surveys) > 0)
-                @foreach ($mitra = $currentsurveys as $survey)
-               
-                    {{ $survey->name }}
-                
-                @endforeach
-                @else
-                    <p>-</p>
-                @endif
-            </div>
-        </tbody>
-    </table> --}}
-
-
-
-
-    {{-- <table class="table table-bordered">
-    <tr>
-        <th width="20px" class="text-center">No</th>
-        <th width="280px"class="text-center">Nama</th>
-        <th width="280px"class="text-center">Mulai</th>
-        <th width="280px"class="text-center">Akhir</th>
-    </tr>
-    @foreach ($sisw as $siswa)
-    <tr>
-        <td class="text-center">{{ ++$i }}</td>
-        <td>{{ $siswa->name }}</td>
-        <td>{{ $siswa->start_date }}</td>
-        <td>{{ $siswa->end_date }}</td>
-    </tr>
-    @endforeach
-</table>
-
-{!! $sisw->links() !!} --}}
-
+        
 
 @endsection
 @section('optionaljs')
@@ -200,8 +105,6 @@
     <script src="/assets/vendor/momentjs/moment-with-locales.js"></script>
 
     <script>
-        var surveyflash = '0';
-    
         var table = $('#datatable-id').DataTable({
             "order": [],
             "serverSide": true,
