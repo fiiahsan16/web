@@ -23,7 +23,11 @@ class MainController extends Controller
         
         return view('survey.show-assessment');
     }
-    
+
+    public function showstatusses()
+    {
+        return view('survey.show-statusses');
+    }
 
     public function show($id)
     {

@@ -58,7 +58,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-6">
-                            <h3 class="mb-0">Nilai Mitra</h3>
+                            <h3 class="mb-0">Status Mitra</h3>
                         </div>
                     </div>
                 </div>
@@ -67,9 +67,9 @@
                         <thead class="thead-light">
                             <tr>
                                 <th>#</th>
-                                <th>Nama Survey</th>
-                                {{-- <th>Assessment</th>
-                                <th></th> --}}
+                                <th>Nama Mitra</th>
+                                <th>Status</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -89,14 +89,13 @@
 
 
 <script>
-    
     var table = $('#datatable-id').DataTable({
         "responsive": true,
         "order": [],
         "serverSide": true,
         "processing": true,
         "ajax": {
-            "url": '/mysurvey-data',
+            "url": '/recruitment-data',
             "type": 'GET'
         },
         "columns": [{
@@ -108,19 +107,19 @@
             {
                 "responsivePriority": 1,
                 "width": "8%",
-                "data": "survey_id",
+                "data": "name",
             },
-            // {
-            //     "responsivePriority": 1,
-            //     "width": "5%",
-            //     "data": "rating",
-            // },
-            // {
-            //     "responsivePriority": 7,
-            //     "width": "7%",
-            //     "orderable": false,
-            //     "data": "id"
-            // }
+            {
+                "responsivePriority": 1,
+                "width": "5%",
+                "data": "status_id",
+            },
+            {
+                "responsivePriority": 7,
+                "width": "7%",
+                "orderable": false,
+                "data": "id"
+            }
         ],
         "language": {
             'paginate': {

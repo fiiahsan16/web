@@ -67,7 +67,7 @@
                             <div class="collapse @if(str_contains(url()->current(), url('/statuspendaftar')) || str_contains(url()->current(), url('/assess'))) show @endif" id="navbar-dash">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a href="/statusdaftar" class="nav-link @if(str_contains(url()->current(), url('/statusdaftar'))) active @endif">Status Pendaftaran</a>
+                                        <a href="/statuspendaftar" class="nav-link @if(str_contains(url()->current(), url('/statuspendaftar'))) active @endif">Status Pendaftaran</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/assess" class="nav-link @if(str_contains(url()->current(), url('/assess'))) active @endif">Penilaian</a>
